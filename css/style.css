@@ -1,0 +1,67 @@
+body{
+	background-color: #c9bdb2;
+	background-image: url(http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/body-bg-repeat.png) ;
+}
+
+#container{
+  	width: 900px;
+  	margin: 0 auto;
+}
+
+#h2{
+	width: 192px;
+    height: 57px;
+    margin: 0 0 10px 0;
+    color: #6b5c4e;
+}
+
+#header h1{
+	font-size: 100px;
+	font-weight: bold;
+    width: 872px;
+    height: 113px;
+    color: #6b5c4e;
+    margin: 40px 0 20px 0;
+}
+.col-xs-6{
+	padding-bottom: 30px;
+}
+	.col-xs-6 img{
+		border-color: #6b5044;
+		border: 10px solid;
+		border-radius: 10px;
+	}
+
+#footer {
+	margin-bottom: 30px;
+}
+	#footer h2 {
+		width: 200px;
+		margin: 20px 0 10px 0;
+	}
+	.col-xs-3{
+		
+	}
+		.col-xs-3 a{
+			font-size: 30px;
+			color: #6b5c4e;
+			background-image: url(http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/contact-icons.jpg); 
+			background-repeat: no-repeat;
+			padding: 15px 0 0px 50px; 
+		}
+		.col-xs-3 a:hover{
+			color: #6b5044;
+			text-decoration: none;
+		}
+			.email{
+				background-position: 0 0px;
+			}
+			.twitter{
+				background-position: 0 -50px;
+			}
+			.fb{
+				background-position: 0 -100px;
+			}
+			.digg{
+				background-position: 0 -150px;
+			}
