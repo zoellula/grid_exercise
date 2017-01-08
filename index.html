@@ -5,6 +5,7 @@
     <title>Chris Spooner</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
   </head>
   <body>
     <div id="container">
@@ -16,78 +17,44 @@
           <h2>My Work</h2>
           <div class="row">
             <div class="col-xs-6">
-              <a href="#" data-toggle="modal" data-target="#picpop1">
+              <a class="link">
                 <img src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/portfolio-clearmedia-th.jpg">
               </a>
             </div>
             <div class="col-xs-6">
-              <a href="#" data-toggle="modal" data-target="#picpop2">
+              <a class="link">
                 <img src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/portfolio-revolution-th.jpg">
               </a>
             </div>
             <div class="col-xs-6">
-              <a href="#" data-toggle="modal" data-target="#picpop3">
+              <a class="link">
                 <img src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/portfolio-vividways-th.jpg">
               </a>
             </div>
             <div class="col-xs-6">
-              <a href="#" data-toggle="modal" data-target="#picpop4">
+              <a class="link">
                 <img src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/portfolio-leadingedge-th.jpg">
               </a>
             </div>
             <div class="col-xs-6">
-              <a href="#" data-toggle="modal" data-target="#picpop5">
+              <a class="link">
                 <img src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/portfolio-sneakers-th.jpg">
               </a>
             </div>
             <div class="col-xs-6">
-              <a href="#" data-toggle="modal" data-target="#picpop6">
+              <a class="link">
                 <img src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/portfolio-geometric-th.jpg">
               </a>
             </div>
           </div>
+
           <!-- Modal -->
           <div class="modal fade" id="picpop1" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-sm" role="document">
-              <div class="modal-content">
-                <img src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/portfolio-clearmedia-th.jpg" class="imgpop">
+              
+              <div class="modal-content" >
+                <!--<span class="close">&times;</span>-->
+                <img src="" id="img1">
               </div>
-            </div>
-          </div>
-          <div class="modal fade" id="picpop2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-sm" role="document">
-              <div class="modal-content">
-                <img src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/portfolio-revolution-th.jpg" class="imgpop">
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="picpop3" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-sm" role="document">
-              <div class="modal-content">
-                <img src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/portfolio-vividways-th.jpg" class="imgpop">
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="picpop4" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-sm" role="document">
-              <div class="modal-content">
-                <img src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/portfolio-leadingedge-th.jpg" class="imgpop">
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="picpop5" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-sm" role="document">
-              <div class="modal-content">
-                <img src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/portfolio-sneakers-th.jpg" class="imgpop">
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="picpop6" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-sm" role="document">
-              <div class="modal-content">
-                <img src="http://blog.spoongraphics.co.uk/wp-content/uploads/2009/personal-portfolio/demo/images/portfolio-geometric-th.jpg" class="imgpop">
-              </div>
-            </div>
           </div>
           <!---->
         </div>
@@ -106,5 +73,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+            // Get the modal
+            var modal = $('#picpop1');
+
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var link = $(".link");
+            var modalImg = $("#img1");
+                        
+            link.on('click', function() {
+              var img = $(this).find('img');
+              var sr = img.attr('src'); 
+              $('#img1').attr('src',sr);
+              $('#picpop1').modal('show');
+            });
+
+            // Get the <span> element that closes the modal
+            /*var span = $(".close");
+
+            // When the user clicks on <span> (x), close the modal
+            span.on('click', function() { 
+              //modal.style.display = "none";
+              $(".close").modal('toggle');
+            });*/
+          </script>
   </body>
 </html>
